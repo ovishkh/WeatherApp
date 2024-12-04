@@ -1,0 +1,66 @@
+# Weather App Structure
+
+weather_app/
+├── app.py
+├── api/
+├── models/
+├── services/
+└── requirements.txt
+└── concept.txt
+
+
+
+# Weather App Build and Run
+
+Api : https://home.openweathermap.org/
+
+pip install -r requirements.txt
+python app.py
+
+or 
+
+pip install requests pandas
+pip show requests pandas
+
+
+
+
+# Concepts Used in the Weather App
+
+1. Object-Oriented Programming (OOP)
+   - Encapsulation: Encapsulated weather-related functionalities in WeatherAPI, HistoryService, and WeatherApp classes.
+   - Class and Object: Used classes like Weather, WeatherAPI, and WeatherApp to represent and organize logic.
+   - Class Methods: Defined a `from_api_response` method in the Weather class for constructing objects from API responses.
+
+2. Error Handling
+   - Used try-except blocks in WeatherAPI to handle potential errors during API calls.
+
+3. Modular Programming
+   - Divided the app into separate modules (api, models, services) to make the code reusable and maintainable.
+
+4. Libraries and Packages
+   - Used external libraries like requests for HTTP calls and pandas for managing tabular data.
+
+5. Input and Output
+   - Used the input() function to take user input (city names and commands).
+   - Used print() to display weather data and history.
+
+6. Loops and Conditionals
+   - Used a while loop to keep the app running until the user exits.
+   - Used if-elif-else statements to process user commands.
+
+7. String Manipulation
+   - Formatted strings to display weather data with readable units.
+
+8. Data Structures
+   - Used a list to store weather search history.
+
+9. Importing and Reusability
+   - Organized reusable functionality in separate files and imported them in app.py.
+   - Demonstrated importing from both built-in and external libraries.
+
+10. API Integration
+    - Integrated the OpenWeatherMap API using the requests library.
+
+11. File Structure and Maintainability
+    - Followed a professional folder structure to keep the project modular and maintainable.
