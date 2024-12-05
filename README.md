@@ -61,7 +61,8 @@ To get a copy of the WeatherApp running on your local machine, follow these step
 3. **Install dependencies:**
     You can use `pip` to install the necessary dependencies:
     ```bash
-    pip install -r requirements.txt
+     pip install -r info/requirements.txt
+
     ```
 
 4. **Set up environment variables:**

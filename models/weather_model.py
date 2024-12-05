@@ -1,30 +1,21 @@
 from datetime import datetime
 
 class Weather:
-    """Model for weather data."""
-    def __init__(self, city, temperature, condition, humidity, wind_speed, timestamp):
-        self.city = city
-        self.temperature = temperature
-        self.condition = condition
-        self.humidity = humidity
-        self.wind_speed = wind_speed
-        self.timestamp = timestamp
+    def __init__(self, data):
+        self.city = data["name"]
+        self.temp_k = data["main"]["temp"]
+        self.temp_c = self.temp_k - 273.15  # Convert Kelvin to Celsius
+        self.weather = data["weather"][0]["description"].capitalize()
+        self.humidity = data["main"]["humidity"]
+        self.wind_speed = data["wind"]["speed"]
+        self.timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    @classmethod
-    def from_api_response(cls, data):
-        """Create a Weather object from API response."""
-        city = data["name"]
-        temp_k = data["main"]["temp"]
-        temp_c = temp_k - 273.15
-        condition = data["weather"][0]["description"].capitalize()
-        humidity = data["main"]["humidity"]
-        wind_speed = data["wind"]["speed"]
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        return cls(city, temp_c, condition, humidity, wind_speed, timestamp)
-
-    def __repr__(self):
-        return (
-            f"City: {self.city}, Temp: {self.temperature:.2f}°C, "
-            f"Condition: {self.condition}, Humidity: {self.humidity}%, "
-            f"Wind Speed: {self.wind_speed} m/s, Timestamp: {self.timestamp}"
-        )
+    def display_weather(self):
+        """ Print weather details """
+        print("\nWeather Information:")
+        print(f"City: {self.city}")
+        print(f"Temperature: {self.temp_c:.2f}°C")
+        print(f"Condition: {self.weather}")
+        print(f"Humidity: {self.humidity}%")
+        print(f"Wind Speed: {self.wind_speed} m/s")
+        print(f"Timestamp: {self.timestamp}")

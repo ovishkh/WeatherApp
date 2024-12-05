@@ -1,12 +1,26 @@
+import pandas as pd
+
 class HistoryService:
-    """Service for managing search history."""
-    def __init__(self):
-        self.history = []
+    history = []  # Store weather history as a list of dictionaries
 
-    def add_to_history(self, weather):
-        """Add a weather search to history."""
-        self.history.append(weather)
+    @staticmethod
+    def add_to_history(city, weather_data): # weather history
+        
+        HistoryService.history.append({ 
+            "City": city,
+            "Temperature (°C)": round(weather_data.temp_c, 2),
+            "Condition": weather_data.weather,
+            "Humidity (%)": weather_data.humidity,
+            "Wind Speed (m/s)": weather_data.wind_speed,
+            "Timestamp": weather_data.timestamp
+        })
 
-    def get_history(self):
-        """Retrieve the search history."""
-        return self.history
+    @staticmethod
+    def show_history(): # show history
+        
+        if HistoryService.history:
+            print("\nWeather Search History:")
+            df = pd.DataFrame(HistoryService.history)
+            print(df)
+        else:
+            print("\nNo history available.")
