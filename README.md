@@ -77,14 +77,14 @@ The app also offers helpful weather tips and motivational quotes to enhance your
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ApraAditi/Weather-App.git
-   cd Weather-App
+   git clone https://github.com/ovishkh/WeatherApp.git
+   cd WeatherApp
    ```
 
 2. Create a virtual environment:
    ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate  
    ```
 
 3. Install the required dependencies:
@@ -168,7 +168,7 @@ The following Python libraries are required:
 
 Install all dependencies using:
 ```bash
-pip install -r requirements.txt
+pip install -r info/requirements.txt
 ```
 
 ---
@@ -188,12 +188,80 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ---
 
-## Acknowledgements
+# Weather Application Project
 
-I would like to express my sincere gratitude to:
+## **Team Responsibilities**
 
-* **The OpenWeatherMap team:** For providing the valuable weather data API that powers this application.
-* **The Python community:** For developing and maintaining the Python programming language and its extensive libraries.
+Our weather application project is a collaborative effort, with each team member handling specific components of the project. Below is the breakdown of responsibilities for each member:
+
+---
+
+### **Ovi**
+1. **Main Functionality**:  
+   - Handles the overall program execution (`main` function) and flow of the application.  
+   - Ensures smooth integration of different modules.
+   
+2. **API Module**:  
+   - Manages API interactions to fetch weather data.  
+   - Implements functions to connect with OpenWeatherMap and handle responses.
+
+3. **Weather Model (District-wise)**:  
+   - Builds models to represent weather data for specific districts.  
+   - Focuses on localized weather insights.
+
+4. **History Module**:  
+   - Implements the feature to store and retrieve weather search history.  
+   - Supports viewing past searches in a tabular format.
+
+5. **Weather Movements**:  
+   - Handles features related to weather phenomena like **rain** and **heatwaves**.
+
+---
+
+### **Apra**
+1. **Weather Model (Country-wide)**:  
+   - Develops models to represent weather data on a national scale.  
+   - Focuses on larger geographic regions and trends.
+
+2. **Favorites Module**:  
+   - Implements the functionality for users to save and view favorite cities or locations for weather updates.
+
+3. **Resources Module**:  
+   - Manages additional resources, such as user guides, FAQs, or external links for weather-related data.
+
+4. **Weather Movements**:  
+   - Covers **snowfall** and **storms**, including predictions and reports.
+
+---
+
+### **Khalid**
+1. **Info Module**:  
+   - Handles the `Info` class for app and developer details.  
+   - Manages the abstract class `AppInfo` and its implementation.  
+   - Displays app information and developer credits.
+
+2. **Project Report**:  
+   - Prepares and compiles the final project documentation.  
+   - Summarizes application functionality, team contributions, and technical details.
+
+---
+
+## **Project Summary**
+
+This weather application provides real-time weather updates, historical data, and insights into various weather movements. It offers localized and country-wide reports and supports favorite locations for quick access. Developed collaboratively by **Team Tengen**, the project showcases robust modular design and innovative features.
+
+---
+
+## **Acknowledgements**
+
+Special thanks to our team members for their dedicated contributions:
+- **Ovi** for spearheading the core application functionality and district-wise insights.
+- **Apra** for national-scale weather models and resource management.
+- **Khalid** for enriching the app with detailed information and professional documentation.
+
+Version: **3.0**  
+Developed by **Team Tengen**  
+
 
 --- 
 

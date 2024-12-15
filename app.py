@@ -8,6 +8,7 @@ from resources.goods import PREDEFINED_CITIES,WEATHER_TIPS, WEATHER_QUOTES
 from api.weather_api import API_KEY, WEATHER_URL 
 
 
+
 def main():
     app_info = DevInfo()
     history_service = HistoryService()
