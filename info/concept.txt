@@ -1,12 +1,16 @@
 # Weather App Structure
 
-weather_app/
-├── app.py
+Weather-App/
 ├── api/
-├── models/
+├── info/
 ├── services/
+├── models/
+├── favorites/
+├── resources/
+├── app.py
 └── requirements.txt
 └── concept.txt
+
 
 
 
@@ -14,7 +18,7 @@ weather_app/
 
 Api : https://home.openweathermap.org/
 
-cd Documents/Github/WeatherApp
+cd Documents/Github/Weather-App
 
 pip install -r requirements.txt
 python app.py

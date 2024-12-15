@@ -1,120 +1,200 @@
-# WeatherApp
-
-## Your Gateway to Real-Time Weather Information
-
-Welcome to **WeatherApp**, a Python-based command-line application that fetches real-time weather data for any city around the world. This repository contains the code and resources for building a simple yet professional weather application that allows users to access weather information using the OpenWeatherMap API.
+# Weather App
+### Your Gateway to Real-Time Weather Information
 
 ---
 
-## Table of Contents
+Welcome to the **Weather App** – your ultimate companion for staying updated with the latest weather conditions! 
+With features like real-time updates, personalized city management, and insightful weather-based tips, we ensure you're 
+always prepared for whatever the skies bring.
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+---
+
+## Table of content
+
+
+1. [Introduction](#introduction)  
+
+2. [Features](#features)  
+
+3. [Installation](#installation)   
+
+4. [Usage](#usage)  
+  
+5. [File Structure](#file-structure)  
+
+6. [API Information](#api-information)  
+
+7. [Dependencies](#dependencies)  
+
+8. [Contribution](#contribution)  
+
+9. [License](#license)
+    
+10. [Acknowledgements](#acknowledgements)  
 
 ---
 
 ## Introduction
 
-WeatherApp is a Python-based command-line application that allows users to search for current weather information by entering a city name. It uses the OpenWeatherMap API to fetch real-time data, and the results are displayed in a clean and user-friendly format. This app is built with object-oriented principles, including abstraction, encapsulation, and polymorphism, and supports a historical search feature.
+The Weather App is a simple and user-friendly application designed to provide real-time weather updates. 
+You can check the weather for any city or country, save your favorite locations, and view your search history. 
+The app also offers helpful weather tips and motivational quotes to enhance your experience.
 
 ---
+
 
 ## Features
 
-- Real-time weather information (temperature, humidity, wind speed, etc.)
-- Search history tracking
-- Interactive command-line interface
-- Easy-to-use and lightweight
-- Built using object-oriented programming concepts (OOP)
-- Uses OpenWeatherMap API for weather data
+1. **Real-Time Weather Information**:
+   - Fetch weather data for any city or country.
+   - Displays temperature, humidity, wind speed, and weather conditions.
 
----
+2. **Predefined Cities**:
+   - Quickly fetch weather for predefined cities in countries like the USA, India, Canada, Australia, and more.
 
-## Technologies Used
+3. **Favorites Management**:
+   - Add cities to your favorites list.
+   - View and fetch weather for your favorite cities.
 
-- **Backend**: Python 3.x
-- **Libraries**: `requests`, `pandas`, `json`, `datetime`
-- **API**: OpenWeatherMap API (Weather data)
+4. **Search History**:
+   - Keeps track of your weather searches.
+   - View your search history in a tabular format.
+
+5. **Weather Tips and Quotes**:
+   - Provides helpful tips and motivational quotes based on the current weather conditions.
+
+6. **Developer Information**:
+   - Learn about the developers behind the app.
 
 ---
 
 ## Installation
 
-To get a copy of the WeatherApp running on your local machine, follow these steps:
+### Prerequisites
+- Python 3.8 or higher
+- `pip` (Python package manager)
 
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/ovishkh/WeatherApp.git
-    ```
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ApraAditi/Weather-App.git
+   cd Weather-App
+   ```
 
-2. **Navigate to the project directory:**
-    ```bash
-    cd WeatherApp
-    ```
+2. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-3. **Install dependencies:**
-    You can use `pip` to install the necessary dependencies:
-    ```bash
-     pip install -r info/requirements.txt
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-    ```
-
-4. **Set up environment variables:**
-    - You'll need an **OpenWeatherMap API Key**. You can obtain it from [OpenWeatherMap](https://openweathermap.org/api).
-    - Create a `.env` file in the root directory and add your API key:
-      ```bash
-      API_KEY="your_api_key_here"
-      ```
-
-5. **Run the application:**
-    ```bash
-    python app.py
-    ```
+4. Run the application:
+   ```bash
+   python app.py
+   ```
 
 ---
 
 ## Usage
 
-Once the application is running, simply enter the city name when prompted to receive the weather details. You can also check the weather search history or type `exit` to quit the application.
+1. **Start the Application**:
+   - Run `python app.py` to start the app.
+
+2. **Commands**:
+   - `exit`: Quit the application.
+   - `history`: View your search history.
+   - `favorites`: Manage your favorite cities.
+   - `about`: Learn more about the app and its developers.
+
+3. **Search Weather**:
+   - Enter a country name to fetch weather for predefined cities in that country.
+   - Enter a city name to fetch weather for that specific city.
+
+4. **Favorites Menu**:
+   - Option 1: View your favorite cities.
+   - Option 2: Add a city to your favorites.
+   - Option 3: Fetch weather for all your favorite cities.
 
 ---
 
-## Contributing
+## File Structure
 
-We welcome contributions from the community! If you'd like to contribute, please follow these steps:
+```
+Weather-App/
+├── api/
+│   ├── __init__.py
+│   ├── weather_api.py
+├── info/
+│   ├── __init__.py
+│   ├── info.py
+│   ├── requirment.txt
+│   ├── concept.txt
+├── services/
+│   ├── __init__.py
+│   ├── history_service.py
+├── models/
+│   ├── __init__.py
+│   ├── weather_model.py
+├── favorites/
+│   ├── __init__.py
+│   ├── favorites_service.py
+├── resources/
+│   ├── __init__.py
+│   ├── goods.py
+├── app.py
 
-1. **Fork the repository**
-2. **Create a new branch:**
-    ```bash
-    git checkout -b feature/YourFeature
-    ```
-3. **Make your changes**
-4. **Commit your changes:**
-    ```bash
-    git commit -m 'Add some feature'
-    ```
-5. **Push to the branch:**
-    ```bash
-    git push origin feature/YourFeature
-    ```
-6. **Open a pull request**
+```
 
 ---
 
+## API Information
+
+This app uses the [OpenWeatherMap API](https://openweathermap.org/api) to fetch weather data. You need an API key to use this service.
+
+- **API Key**: The app includes a default API key (`adb293c2eba52c05f58f2a3148b5bdcb`). Replace it with your own key if needed.
+- **Base URL**: `http://api.openweathermap.org/data/2.5/weather`
+
+---
+
+## Dependencies
+
+The following Python libraries are required:
+- `requests`: For making HTTP requests to the weather API.
+- `pandas`: For managing and displaying tabular data.
+
+Install all dependencies using:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Contribution
+I welcome contributions to improve the Weather App! To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Submit a pull request with a detailed description of your changes.
+
+---
 
 ## License
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more information.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
 
 ## Acknowledgements
 
-We would like to thank the contributors and the open-source community for their valuable resources. Special thanks to [OpenWeatherMap](https://openweathermap.org/) for providing the weather data API.
+I would like to express my sincere gratitude to:
 
+* **The OpenWeatherMap team:** For providing the valuable weather data API that powers this application.
+* **The Python community:** For developing and maintaining the Python programming language and its extensive libraries.
+
+--- 
+
+Enjoy using the Weather App! Stay informed and prepared for any weather conditions. 🌤️
