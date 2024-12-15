@@ -188,7 +188,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ---
 
-# Weather Application Project
+
 
 ## **Team Responsibilities**
 
@@ -196,7 +196,7 @@ Our weather application project is a collaborative effort, with each team member
 
 ---
 
-### **Ovi**
+### **Ovi Shekh **
 1. **Main Functionality**:  
    - Handles the overall program execution (`main` function) and flow of the application.  
    - Ensures smooth integration of different modules.
@@ -218,7 +218,7 @@ Our weather application project is a collaborative effort, with each team member
 
 ---
 
-### **Apra**
+### **Apra Aditi**
 1. **Weather Model (Country-wide)**:  
    - Develops models to represent weather data on a national scale.  
    - Focuses on larger geographic regions and trends.
@@ -234,7 +234,7 @@ Our weather application project is a collaborative effort, with each team member
 
 ---
 
-### **Khalid**
+### **Khalid Anwar**
 1. **Info Module**:  
    - Handles the `Info` class for app and developer details.  
    - Manages the abstract class `AppInfo` and its implementation.  
